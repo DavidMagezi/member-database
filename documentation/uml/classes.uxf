@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>540</y>
+      <w>280</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>_CheckUserInput Claass_
+--
+
+fields: vector&lt;string&gt;
+rules: vector&lt;regex&gt;
+
+--
+
+check_input(member)
+check_email(string)
+get_errors(): string
+
+--
+
+-checks user-inputed data</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>120</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>_Member Claass_
+--
+id: Long=
+first_name: string
+last_name: string
+email: string
+university: enum
+college: enum
+info: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>420</y>
+      <w>210</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>_Read Spreadsheet Claass_
+--
+
+spreadsheet_name: string
+data: vector&lt;Member&gt;
+
+--
+open_file()
+convert_line_to_member(string)
+close_file()
+--
+Reads in original spreadsheet</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>70</y>
+      <w>770</w>
+      <h>920</h>
+    </coordinates>
+    <panel_attributes>Backend</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>120</y>
+      <w>280</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>/_Database Claass (Abstract)_/
+--
+
+database_name: string
+data: vector&lt;Member&gt;
+
+--
+connect_to_database()
+initial_create_database()
+find_member_by_email(string)
+add_member_to_database(member)
+remove_member_from_database(member)
+update_member_in_database(member)
+disconnect_from_database()
+--
+Creates, connects to, 
+reads and modifies database</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>420</y>
+      <w>280</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Database Class
+--
+
+Implementation using sqlite3
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

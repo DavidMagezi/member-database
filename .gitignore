@@ -1,0 +1,17 @@
+yo.txt
+gcm.cache
+objs
+bin
+documentation/html/
+documentation/latex/Makefile
+*.aux
+*.idx
+*.ilg
+*.ind
+*.log
+*.out
+*.sty
+*.tex
+*.toc
+
+
